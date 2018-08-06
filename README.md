@@ -1,13 +1,13 @@
 # Game
-Unity project
+##System
 -	RPG, H&S, Fantasy (Spell), Co-oP
--	2 obtížnosti (Normal, Hard), možnost změny obtížnsoti
--	Talenty + Perk System (End Game)
--	Odlišné talenty na classy
--	Všichni začínají stejně (Commoner) (ZERO => HERO)
--	Range Attack = skill shot
+-	2 difficulties (Normal, Hard), možnost změny obtížnsoti
+-	Tallents + Perk System (End Game)
+-	Different talents for classes
+-	Everyone strts the same (Commoner) (ZERO => HERO)
+-	Ranged Attack = skill shot
 
--	Classy: 
+##Classes: 
 -	warrior (Tank / DPS (2h, 1,5h + bucklet)
 -	Rogue (Tactition / Burglar)
 -	Ranger (Long Bow / Short Bow (#Legolas))
