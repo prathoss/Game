@@ -1,7 +1,7 @@
 # Game
 ## System
 -	RPG, H&S, Fantasy (Spell), Co-oP
--	2 difficulties (Normal, Hard), možnost změny obtížnsoti
+-	2 difficulties (Normal, Hard), can change difficulty (controlls dropp)
 -	Tallents + Perk System (End Game)
 -	Different talents for classes
 -	Everyone strts the same (Commoner) (ZERO => HERO)
