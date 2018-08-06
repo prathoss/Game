@@ -1,5 +1,5 @@
 # Game
-##System
+## System
 -	RPG, H&S, Fantasy (Spell), Co-oP
 -	2 difficulties (Normal, Hard), možnost změny obtížnsoti
 -	Tallents + Perk System (End Game)
@@ -7,7 +7,7 @@
 -	Everyone strts the same (Commoner) (ZERO => HERO)
 -	Ranged Attack = skill shot
 
-##Classes: 
+## Classes: 
 -	warrior (Tank / DPS (2h, 1,5h + bucklet)
 -	Rogue (Tactition / Burglar)
 -	Ranger (Long Bow / Short Bow (#Legolas))
