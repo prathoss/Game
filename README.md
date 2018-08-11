@@ -8,7 +8,7 @@
 * ### Difficulties:
   * Normal
   * Hard
-  * Changing difficulity
+  * Changing difficulty
     * Can change difficulty any character any time 
     * Changing dropp rate and items stats
 * ### Character progression:
