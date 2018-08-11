@@ -23,22 +23,22 @@
 ___
 ## Classes: 
 *	Warrior
-  * Tank
-  * DPS
-    * 2h
-    * 1,5h + bucklet
+   * Tank
+   * DPS
+     * 2h
+     * 1,5h + bucklet
 *	Rogue
-  * Tactition
-  * Burglar
+   * Tactition
+   * Burglar
 *	Ranger
-  * Long Bow
-  * Short Bow (#Legolas)
+   * Long Bow
+   * Short Bow (#Legolas)
 *	Mage / Wizzard
-  * Elementalist
-  * Support + Heal (frontliner)
+   * Elementalist
+   * Support + Heal (frontliner)
 *	Corrupted Priest (Ocultist)
-  * Mind Control
-  * Cult Master
+   * Mind Control
+   * Cult Master
 *	Apothecary
-  * Scalpel master
-  * Mad scientist (#Rick&Morty)  
+   * Scalpel master
+   * Mad scientist (#Rick&Morty)
