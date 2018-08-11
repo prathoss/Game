@@ -8,9 +8,9 @@
 * ### Difficulties:
   * Normal
   * Hard
-    * Changing difficulity
-      * Can change difficulty any character any time 
-      * Changing dropp rate and items stats
+  * Changing difficulity
+    * Can change difficulty any character any time 
+    * Changing dropp rate and items stats
 * ### Character progression:
   * Tallents Different for each class
     * Two trees
