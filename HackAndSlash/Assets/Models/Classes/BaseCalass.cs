@@ -10,11 +10,11 @@ namespace Models.Classes
 
         protected int Intelect;
 
-        public BaseCalass(string name, int health, int level, int strength, int agility, int intelect, int physicalProtection, int magicalProtection, int meleePower, int rangedPower, int magicalPower) : base(name, health, level, physicalProtection, magicalProtection, meleePower, rangedPower, magicalPower)
+        public BaseCalass(string name, int health, int level, int strength, int agility, int intellect, int physicalProtection, int magicalProtection, int meleePower, int rangedPower, int magicalPower) : base(name, health, level, physicalProtection, magicalProtection, meleePower, rangedPower, magicalPower)
         {
             Strength = strength;
             Agility = agility;
-            Intelect = intelect;
+            Intellect = intellect;
         }
 
         protected abstract override int MagicalProtection();
