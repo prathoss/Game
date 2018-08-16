@@ -8,7 +8,7 @@ namespace Models.Classes
 
         protected int Agility;
 
-        protected int Intelect;
+        protected int Intellect;
 
         public BaseCalass(string name, int health, int level, int strength, int agility, int intellect, int physicalProtection, int magicalProtection, int meleePower, int rangedPower, int magicalPower) : base(name, health, level, physicalProtection, magicalProtection, meleePower, rangedPower, magicalPower)
         {
