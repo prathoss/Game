@@ -2,7 +2,7 @@
 {
     class Warrior : BaseCalass
     {
-        public Warrior(string name, int health, int level, int strength, int agility, int intelect, int physicalProtection, int magicalProtection, int meleePower, int rangedPower, int magicalPower) : base(name, health, level, strength, agility, intelect, physicalProtection, magicalProtection, meleePower, rangedPower, magicalPower)
+        public Warrior(string name, int health, int level, int strength, int agility, int intellect, int physicalProtection, int magicalProtection, int meleePower, int rangedPower, int magicalPower) : base(name, health, level, strength, agility, intellect, physicalProtection, magicalProtection, meleePower, rangedPower, magicalPower)
         {
         }
 
