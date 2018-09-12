@@ -22,6 +22,8 @@ GameObject:
   - component: {fileID: 33559585187332614}
   - component: {fileID: 135522211678420066}
   - component: {fileID: 23760074633282704}
+  - component: {fileID: 114220459130126270}
+  - component: {fileID: 114103715916277048}
   m_Layer: 0
   m_Name: Fireball
   m_TagString: Untagged
@@ -83,6 +85,29 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1678891298367280}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &114103715916277048
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1678891298367280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e707458450772ea499fe3013e19879ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Destination: {x: 0, y: 0, z: 0}
+--- !u!114 &114220459130126270
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1678891298367280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c541222ea657a74479bc7a94fe401e58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!135 &135522211678420066
 SphereCollider:
   m_ObjectHideFlags: 1

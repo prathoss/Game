@@ -4,17 +4,19 @@ namespace Models.Spells
 {
     public class Fireball
     {
-        public Fireball(GameObject fireball, Vector3 destination)
+        public Fireball(GameObject fireball, SpellProperties properties)
         {
             _fireball = fireball;
             _initailPosition = _fireball.transform.position;
-            _direction = (destination - _initailPosition).normalized * speed;
+            _direction = (properties.Destination - _initailPosition).normalized * _speed;
+            Caster = properties.Caster;
         }
 
         private GameObject _fireball;
         private Vector3 _initailPosition;
         private Vector3 _direction;
-        private float speed = 0.3f;
+        private readonly float _speed = 0.3f;
+        public GameObject Caster;
 
         public void Move()
         {
@@ -26,6 +28,13 @@ namespace Models.Spells
             {
                 Object.Destroy(_fireball);
             }
+        }
+
+        public int DealDamage()
+        {
+            int randomDamage = Random.Range(1, 10);
+
+            return randomDamage;
         }
     }
 }

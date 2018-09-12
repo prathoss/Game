@@ -15,9 +15,10 @@ public class PlayerSpellsCast : MonoBehaviour {
     private void ThrowFireball()
     {
         Vector3 hitPoint = _cameraRaycaster.hit.point;
-        GameObject fireball = Instantiate(_fireballPrefab, gameObject.transform.position + (hitPoint - gameObject.transform.forward).normalized / 2, Quaternion.identity);
+        GameObject fireball = Instantiate(_fireballPrefab, gameObject.transform.position, Quaternion.identity);
         SpellProperties properties = fireball.GetComponent<SpellProperties>();
         properties.Destination = hitPoint;
+        properties.Caster = gameObject;
     }
 
     // Update is called once per frame
