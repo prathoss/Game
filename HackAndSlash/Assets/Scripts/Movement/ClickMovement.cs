@@ -19,7 +19,7 @@ public class ClickMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-        if (Input.GetMouseButton((int)MouseButton.LeftMouse))
+        if (Input.GetMouseButton((int)MouseButton.RightMouse))
         {
             if (_cameraRaycaster.layerHit == Layers.Walkable) _currentClickTargert = _cameraRaycaster.hit.point;
         }
