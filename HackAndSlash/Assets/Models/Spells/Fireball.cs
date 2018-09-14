@@ -8,21 +8,22 @@ namespace Models.Spells
         {
             _fireball = fireball;
             _initailPosition = _fireball.transform.position;
-            _direction = (properties.Destination - _initailPosition).normalized * _speed;
+            _destination = Vector3.Normalize(properties.Destination - _initailPosition) * range;
             Caster = properties.Caster;
         }
 
         private GameObject _fireball;
         private Vector3 _initailPosition;
-        private Vector3 _direction;
-        private readonly float _speed = 0.3f;
+        private Vector3 _destination;
+        private readonly float speed = 7f;
+        private readonly float range = 5.0f;
         public GameObject Caster;
 
         public void Move()
         {
-            if (Vector3.Distance(_initailPosition, _fireball.transform.position) < 5)
+            if (_fireball.transform.position != _destination)
             {
-                _fireball.transform.position += _direction;
+                _fireball.transform.position = Vector3.MoveTowards(_fireball.transform.position, _destination, speed * Time.deltaTime);
             }
             else
             {
@@ -32,7 +33,7 @@ namespace Models.Spells
 
         public int DealDamage()
         {
-            int randomDamage = Random.Range(1, 10);
+            int randomDamage = Random.Range(8, 25);
 
             return randomDamage;
         }

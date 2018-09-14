@@ -245,6 +245,7 @@
     <Compile Include="Assets\Scripts\Movement\CameraRaycaster.cs" />
     <Compile Include="Assets\Scripts\Movement\ClickMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerSpellsCast.cs" />
+    <Compile Include="Assets\Scripts\UiCameraPerpendicular.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
