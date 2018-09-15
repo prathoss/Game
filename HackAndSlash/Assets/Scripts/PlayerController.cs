@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class PlayerSpellsCast : MonoBehaviour {
+public class PlayerController : MonoBehaviour {
 
     private GameObject _fireballPrefab;
     private CameraRaycaster _cameraRaycaster;
@@ -27,5 +27,10 @@ public class PlayerSpellsCast : MonoBehaviour {
         {
             ThrowFireball();
         }
+    }
+
+    void CastSpell()
+    {
+
     }
 }
