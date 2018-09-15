@@ -241,6 +241,7 @@
     <Compile Include="Assets\Resources\SpellProperties.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\EnemyController.cs" />
+    <Compile Include="Assets\Scripts\HealthUI.cs" />
     <Compile Include="Assets\Scripts\Layers.cs" />
     <Compile Include="Assets\Scripts\Movement\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Movement\CameraRaycaster.cs" />
