@@ -6,13 +6,14 @@ using UnityEngine.AI;
 public class EnemyController : MonoBehaviour {
 
     public float lookRadius = 3f;
-
+    
     Transform target;
     NavMeshAgent agent;
 
 	// Use this for initialization
 	void Start () {
         target = PlayerManager.instance.player.transform;
+        //Vector3 spawn = transform.position;
         agent = GetComponent<NavMeshAgent>();
 	}
 	
