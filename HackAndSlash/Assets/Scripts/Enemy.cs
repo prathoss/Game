@@ -5,7 +5,7 @@ public class Enemy : MonoBehaviour {
 
     private int _damageTaken = 0;
     private readonly int _maxHealth = 100;
-    private readonly string _name = "Big bad cube";
+    //private readonly string _name = "Big bad cube";
     public Text healthText;
     public Text NameText;
     public Image HealthBar;
