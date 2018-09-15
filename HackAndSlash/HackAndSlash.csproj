@@ -239,6 +239,7 @@
     <Compile Include="Assets\Models\Spells\Fireball.cs" />
     <Compile Include="Assets\Resources\FireballMovement.cs" />
     <Compile Include="Assets\Resources\SpellProperties.cs" />
+    <Compile Include="Assets\Scripts\CharacterAnimator.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\EnemyController.cs" />
     <Compile Include="Assets\Scripts\HealthUI.cs" />
