@@ -15,7 +15,7 @@ public class Enemy : MonoBehaviour {
 
     private void Start()
     {
-        NameText.text = _name;
+        //NameText.text = _name;
     }
 
     public void TakeDamage(int damage)

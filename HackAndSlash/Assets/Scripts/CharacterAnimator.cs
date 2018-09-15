@@ -7,12 +7,12 @@ public class CharacterAnimator : MonoBehaviour {
 
     const float locomotionAnimationSmoothTime = 0.1f;
     NavMeshAgent agent;
-    protected Animator animator;
+    Animator animator;
 
     public AnimatorOverrideController overrideController;
 
 	// Use this for initialization
-	protected virtual void Start () {
+	void Start () {
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponentInChildren<Animator>();
 
@@ -24,7 +24,7 @@ public class CharacterAnimator : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	protected virtual void Update () {
+	 void Update () {
         float speedPercent = agent.velocity.magnitude / agent.speed;
         animator.SetFloat("speedPercent", speedPercent, locomotionAnimationSmoothTime, Time.deltaTime);
 	}
