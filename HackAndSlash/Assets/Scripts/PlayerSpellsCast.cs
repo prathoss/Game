@@ -4,6 +4,8 @@ public class PlayerSpellsCast : MonoBehaviour {
 
     private GameObject _fireballPrefab;
     private CameraRaycaster _cameraRaycaster;
+    public float spellSpeed = 1f;
+    private float spellCooldown = 0f;
 
 
 	// Use this for initialization
@@ -12,20 +14,27 @@ public class PlayerSpellsCast : MonoBehaviour {
         _cameraRaycaster = Camera.main.GetComponent<CameraRaycaster>();
     }
 
-    private void ThrowFireball()
-    {
-        Vector3 hitPoint = _cameraRaycaster.hit.point;
-        GameObject fireball = Instantiate(_fireballPrefab, gameObject.transform.position, Quaternion.identity);
-        SpellProperties properties = fireball.GetComponent<SpellProperties>();
-        properties.Destination = hitPoint;
-        properties.Caster = gameObject;
-    }
-
     // Update is called once per frame
-    void Update () {
+    void Update()
+    {
         if (Input.GetKeyDown(KeyCode.Q))
         {
             ThrowFireball();
+            spellCooldown -= Time.deltaTime;
         }
     }
+
+    private void ThrowFireball()
+    {
+        if (spellCooldown != null)
+        {
+            Vector3 hitPoint = _cameraRaycaster.hit.point;
+            GameObject fireball = Instantiate(_fireballPrefab, gameObject.transform.position, Quaternion.identity);
+            SpellProperties properties = fireball.GetComponent<SpellProperties>();
+            properties.Destination = hitPoint;
+            properties.Caster = gameObject;
+            spellCooldown = 1f / spellSpeed;
+        }
+        
+    }    
 }
