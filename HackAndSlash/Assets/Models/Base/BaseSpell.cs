@@ -9,7 +9,6 @@ namespace Assets.Models.Base
         public int Range { get; protected set; }
         protected float _speed;
         protected GameObject _caster;
-        protected Vector3 _initialPosition;
         protected Vector3 _destination;
         protected GameObject _spellObject;
         protected int _power;
@@ -35,12 +34,9 @@ namespace Assets.Models.Base
         public void GetProperties(GameObject gameObject, Vector3 direction)
         {
             _spellObject = gameObject;
-            _destination = direction;
-            _destination *= 5;
+            _destination = gameObject.transform.position + direction * Range;
             _destination.y = _baseSpellHeight;
-            _initialPosition = _spellObject.transform.position;
         }
-
 
     }
 }

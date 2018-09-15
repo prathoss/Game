@@ -12,7 +12,7 @@ public class SpellController : MonoBehaviour
     void Start ()
     {
         CameraRaycaster cameraRaycaster = Camera.main.GetComponent<CameraRaycaster>();
-        _direction = Vector3.Normalize(cameraRaycaster.hit.point);
+        _direction = Vector3.Normalize(cameraRaycaster.hit.point - transform.position);
         _spell.GetProperties(gameObject, _direction);
     }
 	
