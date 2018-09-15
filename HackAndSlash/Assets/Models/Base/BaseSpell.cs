@@ -12,7 +12,8 @@ namespace Assets.Models.Base
         protected Vector3 _destination;
         protected GameObject _spellObject;
         protected int _power;
-        protected readonly float _baseSpellHeight = 0.8f;
+        protected readonly float _baseSpellHeight = 0.3f;
+        public static readonly string PrefabLocation = string.Empty;
 
         public void Move()
         {
@@ -28,7 +29,7 @@ namespace Assets.Models.Base
 
         public int DealDamage()
         {
-            return Random.Range(_power, (int)(_power * 1.2f));
+            return Random.Range(_power, (int)(_power * 1.7f));
         }
 
         public void GetProperties(GameObject gameObject, Vector3 direction)

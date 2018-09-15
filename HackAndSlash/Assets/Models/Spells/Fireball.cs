@@ -12,5 +12,7 @@ namespace Models.Spells
             _power = 15;
             Range = 5;
         }
+
+        public static readonly new string PrefabLocation = "Fireball";
     }
 }

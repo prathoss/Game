@@ -26,7 +26,7 @@ public class SpellController : MonoBehaviour
     {
         if(other.gameObject.layer == (int)Layers.Enemy)
         {
-            EnemyController enemy = gameObject.GetComponent<EnemyController>();
+            EnemyController enemy = other.gameObject.GetComponent<EnemyController>();
             enemy.TakeDamage(_spell.DealDamage());
         }
     }

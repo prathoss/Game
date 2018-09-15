@@ -22,8 +22,7 @@ GameObject:
   - component: {fileID: 223187610226421588}
   - component: {fileID: 114545833837114466}
   - component: {fileID: 114951228084830534}
-  - component: {fileID: 114173637559156346}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,8 +40,8 @@ GameObject:
   - component: {fileID: 33167176276664080}
   - component: {fileID: 65071558381218588}
   - component: {fileID: 23428430333023116}
-  - component: {fileID: 54967958707177468}
   - component: {fileID: 114629172238861178}
+  - component: {fileID: 54976564547134574}
   m_Layer: 9
   m_Name: Enemy
   m_TagString: Untagged
@@ -60,7 +59,7 @@ GameObject:
   - component: {fileID: 224069570604877410}
   - component: {fileID: 222218126588691604}
   - component: {fileID: 114031622217050146}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77,7 +76,7 @@ GameObject:
   - component: {fileID: 224925976227972926}
   - component: {fileID: 222408618182464644}
   - component: {fileID: 114491784613468402}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: HealthBg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +93,7 @@ GameObject:
   - component: {fileID: 224004078442724378}
   - component: {fileID: 222188786516719790}
   - component: {fileID: 114367235886827024}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -156,7 +155,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1549669558424512}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &54967958707177468
+--- !u!54 &54976564547134574
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -166,8 +165,8 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -210,18 +209,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114173637559156346
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1251906230579558}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 104f4b143ca64c545956566a7559edc8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Camera: {fileID: 0}
 --- !u!114 &114367235886827024
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -314,7 +301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ac7e9aef38fd6f43943cd53a66a1ba5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthText: {fileID: 0}
+  NameText: {fileID: 114367235886827024}
   HealthBar: {fileID: 114031622217050146}
 --- !u!114 &114951228084830534
 MonoBehaviour:
@@ -377,7 +364,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1879862742569084}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 224362717910474914}
@@ -395,7 +382,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1554138899710478}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.0000023841858, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 224925976227972926}
@@ -413,7 +400,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1251906230579558}
   m_LocalRotation: {x: 0.46174863, y: 0, z: 0, w: 0.8870109}
-  m_LocalPosition: {x: 0, y: 1.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.03, y: 0.05, z: 0.3}
   m_Children:
   - {fileID: 224925976227972926}
@@ -433,7 +420,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1829051603211052}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -5.0299997, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224069570604877410}

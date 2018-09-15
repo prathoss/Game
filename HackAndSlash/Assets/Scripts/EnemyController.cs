@@ -9,6 +9,7 @@ public class EnemyController : MonoBehaviour {
     private readonly int _maxHealth = 100;
     private readonly string _name = "Big bad cube";
     public Text NameText;
+    public Text DamageDelt;
     public Image HealthBar;
 
     public int HealthPercentage { get { return _maxHealth - _damageTaken; } }
@@ -28,6 +29,7 @@ public class EnemyController : MonoBehaviour {
         }
         else
         {
+            DamageDelt.text = (-damage).ToString();
             // Manipulate health bar.
             HealthBar.rectTransform.offsetMax = new Vector3(HealthMissingPercentage, 5);
         }

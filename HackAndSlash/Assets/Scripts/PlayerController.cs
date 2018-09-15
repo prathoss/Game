@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
-    private GameObject _fireballPrefab;
+    private GameObject _spell1;
 
 
 	// Use this for initialization
 	void Start () {
-        _fireballPrefab = (GameObject)Resources.Load("Fireball", typeof(GameObject));
+        _spell1 = (GameObject)Resources.Load(Fireball.PrefabLocation, typeof(GameObject));
     }
 
     // Update is called once per frame
@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour {
     void CastSpell<T>() where T : BaseSpell, new()
     {
         Vector3 spawnPoint = transform.position;
-        GameObject spell = Instantiate(_fireballPrefab, spawnPoint, Quaternion.identity);
+        GameObject spell = Instantiate(_spell1, spawnPoint, Quaternion.identity);
         spell.GetComponent<SpellController>().CreateSpell<T>();
     }
 }
