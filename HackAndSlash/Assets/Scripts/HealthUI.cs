@@ -26,7 +26,7 @@ public class HealthUI : MonoBehaviour {
         }
 	}
 	
-	void LateUpdate () {
+	void Update () {
         ui.position = target.position;
         ui.forward = -cam.forward;
 	}
