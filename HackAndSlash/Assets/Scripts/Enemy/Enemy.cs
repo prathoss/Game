@@ -1,13 +1,12 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(BoxCollider))]
-public class EnemyController : MonoBehaviour {
+public class Enemy : MonoBehaviour {
 
-    
     private int _damageTaken = 0;
     private readonly int _maxHealth = 100;
-    private readonly string _name = "Big bad cube";
+    //private readonly string _name = "Big bad cube";
+    public Text healthText;
     public Text NameText;
     public Image HealthBar;
 
@@ -16,7 +15,7 @@ public class EnemyController : MonoBehaviour {
 
     private void Start()
     {
-        NameText.text = _name;
+        //NameText.text = _name;
     }
 
     public void TakeDamage(int damage)
@@ -24,10 +23,12 @@ public class EnemyController : MonoBehaviour {
         _damageTaken += damage;
         if(HealthPercentage <= 0)
         {
-            Destroy(gameObject);
+            Object.Destroy(gameObject);
+            healthText.text = string.Empty;
         }
         else
         {
+            healthText.text = "Health: " + HealthPercentage + "%";
             // Manipulate health bar.
             HealthBar.rectTransform.offsetMax = new Vector3(HealthMissingPercentage, 5);
         }
