@@ -243,6 +243,7 @@
     <Compile Include="Assets\Models\Base\Armor.cs" />
     <Compile Include="Assets\Models\Base\AttackType.cs" />
     <Compile Include="Assets\Models\Base\BaseCharacter.cs" />
+    <Compile Include="Assets\Models\Base\BaseSpell.cs" />
     <Compile Include="Assets\Models\Base\Equipment.cs" />
     <Compile Include="Assets\Models\Base\Projectile.cs" />
     <Compile Include="Assets\Models\Base\SpecialEffect.cs" />
@@ -251,9 +252,7 @@
     <Compile Include="Assets\Models\Classes\BaseCalass.cs" />
     <Compile Include="Assets\Models\Classes\Warrior.cs" />
     <Compile Include="Assets\Models\Spells\Fireball.cs" />
-    <Compile Include="Assets\Models\Spells\BaseSpell.cs" />
-    <Compile Include="Assets\Resources\FireballMovement.cs" />
-    <Compile Include="Assets\Resources\SpellProperties.cs" />
+    <Compile Include="Assets\Resources\SpellController.cs" />
     <Compile Include="Assets\Scripts\EnemyController.cs" />
     <Compile Include="Assets\Scripts\Layers.cs" />
     <Compile Include="Assets\Scripts\Movement\CameraFollow.cs" />

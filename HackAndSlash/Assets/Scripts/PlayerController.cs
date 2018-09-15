@@ -1,36 +1,29 @@
-﻿using UnityEngine;
+﻿using Assets.Models.Base;
+using Models.Spells;
+using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
     private GameObject _fireballPrefab;
-    private CameraRaycaster _cameraRaycaster;
 
 
 	// Use this for initialization
 	void Start () {
         _fireballPrefab = (GameObject)Resources.Load("Fireball", typeof(GameObject));
-        _cameraRaycaster = Camera.main.GetComponent<CameraRaycaster>();
-    }
-
-    private void ThrowFireball()
-    {
-        Vector3 hitPoint = _cameraRaycaster.hit.point;
-        GameObject fireball = Instantiate(_fireballPrefab, gameObject.transform.position, Quaternion.identity);
-        SpellProperties properties = fireball.GetComponent<SpellProperties>();
-        properties.Destination = hitPoint;
-        properties.Caster = gameObject;
     }
 
     // Update is called once per frame
     void Update () {
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            ThrowFireball();
+            CastSpell<Fireball>();
         }
     }
 
-    void CastSpell()
+    void CastSpell<T>() where T : BaseSpell, new()
     {
-
+        Vector3 spawnPoint = new Vector3(transform.position.x, 0.8f, transform.position.z);
+        GameObject spell = Instantiate(_fireballPrefab, spawnPoint, Quaternion.identity);
+        spell.GetComponent<SpellController>().CreateSpellService<T>();
     }
 }
