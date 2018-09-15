@@ -23,7 +23,6 @@ GameObject:
   - component: {fileID: 135522211678420066}
   - component: {fileID: 23760074633282704}
   - component: {fileID: 114220459130126270}
-  - component: {fileID: 95106297028730752}
   m_Layer: 0
   m_Name: Fireball
   m_TagString: Untagged
@@ -85,23 +84,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1678891298367280}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!95 &95106297028730752
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1678891298367280}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 7b59728cdbaf74748aad1aedb3963651, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114220459130126270
 MonoBehaviour:
   m_ObjectHideFlags: 1

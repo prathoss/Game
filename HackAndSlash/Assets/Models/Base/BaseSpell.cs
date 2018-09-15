@@ -32,10 +32,11 @@ namespace Assets.Models.Base
             return Random.Range(_power, (int)(_power * 1.2f));
         }
 
-        public void GetProperties(GameObject gameObject, Vector3 destination)
+        public void GetProperties(GameObject gameObject, Vector3 direction)
         {
             _spellObject = gameObject;
-            _destination = destination;
+            _destination = direction;
+            _destination *= 5;
             _destination.y = _baseSpellHeight;
             _initialPosition = _spellObject.transform.position;
         }

@@ -6,14 +6,14 @@ using UnityEngine;
 public class SpellController : MonoBehaviour
 {
     private BaseSpell _spell;
-    private Vector3 _destination;
+    private Vector3 _direction;
 
     // Use this for initialization
     void Start ()
     {
         CameraRaycaster cameraRaycaster = Camera.main.GetComponent<CameraRaycaster>();
-        _destination = cameraRaycaster.hit.point - transform.position;
-        _spell.GetProperties(gameObject, _destination);
+        _direction = Vector3.Normalize(cameraRaycaster.hit.point);
+        _spell.GetProperties(gameObject, _direction);
     }
 	
 	// Update is called once per frame
@@ -31,7 +31,7 @@ public class SpellController : MonoBehaviour
         }
     }
 
-    public void CreateSpellService<T>() where T : BaseSpell, new()
+    public void CreateSpell<T>() where T : BaseSpell, new()
     {
         _spell = new T();
     }

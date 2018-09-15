@@ -22,8 +22,8 @@ public class PlayerController : MonoBehaviour {
 
     void CastSpell<T>() where T : BaseSpell, new()
     {
-        Vector3 spawnPoint = new Vector3(transform.position.x, 0.8f, transform.position.z);
+        Vector3 spawnPoint = transform.position;
         GameObject spell = Instantiate(_fireballPrefab, spawnPoint, Quaternion.identity);
-        spell.GetComponent<SpellController>().CreateSpellService<T>();
+        spell.GetComponent<SpellController>().CreateSpell<T>();
     }
 }

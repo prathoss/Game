@@ -10,10 +10,7 @@ namespace Models.Spells
         {
             _speed = 7f;
             _power = 15;
+            Range = 5;
         }
-
-        public new readonly int Range = 5;
-        
-
     }
 }
