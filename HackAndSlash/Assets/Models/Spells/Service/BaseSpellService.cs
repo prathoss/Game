@@ -34,6 +34,11 @@ namespace Assets.Models.Spells.Service
             return Time.time >= _avilableAt ? true : false;
         }
 
+        public int CooldownTimeRemining()
+        {
+            return IsAvilable() ? 0 : (int)(_avilableAt - Time.time) + 1;
+        }
+
         public abstract void Cast();
 
 
