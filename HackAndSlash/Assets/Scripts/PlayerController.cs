@@ -1,29 +1,54 @@
-﻿using Assets.Models.Base;
-using Models.Spells;
+﻿using Assets.Models.Factory;
+using Assets.Models.Spells;
+using Assets.Models.Spells.Service;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour {
+public class PlayerController : MonoBehaviour
+{
+    private SpellServiceFactory _spellFactory;
+    public ESpells SpellQ;
+    private BaseSpellService _spellQ;
+    public ESpells SpellW;
+    private BaseSpellService _spellW;
+    public ESpells SpellE;
+    private BaseSpellService _spellE;
 
-    private GameObject _spell1;
 
-
-	// Use this for initialization
-	void Start () {
-        _spell1 = (GameObject)Resources.Load(Fireball.PrefabLocation, typeof(GameObject));
+    // Use this for initialization
+    void Start ()
+    {
+        _spellFactory = new SpellServiceFactory(gameObject);
     }
 
     // Update is called once per frame
-    void Update () {
+    void Update ()
+    {
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            CastSpell<Fireball>();
+            if(_spellQ == null)
+            {
+                _spellQ = _spellFactory.GenerateSpellService(SpellQ);
+            }
+            if(_spellQ.IsAvilable())
+                _spellQ.Cast();
         }
-    }
-
-    void CastSpell<T>() where T : BaseSpell, new()
-    {
-        Vector3 spawnPoint = transform.position;
-        GameObject spell = Instantiate(_spell1, spawnPoint, Quaternion.identity);
-        spell.GetComponent<SpellController>().CreateSpell<T>();
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            if (_spellW == null)
+            {
+                _spellW = _spellFactory.GenerateSpellService(SpellW);
+            }
+            if (_spellW.IsAvilable())
+                _spellW.Cast();
+        }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (_spellE == null)
+            {
+                _spellE = _spellFactory.GenerateSpellService(SpellE);
+            }
+            if (_spellE.IsAvilable())
+                _spellE.Cast();
+        }
     }
 }

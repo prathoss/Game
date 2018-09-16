@@ -1,9 +1,7 @@
 ﻿using Assets.Models.Base;
-using System;
 
 namespace Models.Spells
 {
-    [Serializable]
     public class Fireball : BaseSpell
     {
         public Fireball()
@@ -13,6 +11,6 @@ namespace Models.Spells
             Range = 5;
         }
 
-        public static readonly new string PrefabLocation = "Fireball";
+        public static readonly new string PrefabLocation = "Spells/Fireball/Fireball";
     }
 }
