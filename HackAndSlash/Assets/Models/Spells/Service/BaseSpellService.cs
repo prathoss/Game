@@ -7,6 +7,9 @@ namespace Assets.Models.Spells.Service
     abstract class BaseSpellService : ScriptableObject
     {
         public int ManaCost { get; protected set; }
+        public int Range { get; protected set; }
+        public int Power { get; protected set; }
+        protected float _speed;
         protected float _avilableAt;
         protected float _cooldown;
         public float Cooldown { get; private set; }
@@ -23,7 +26,7 @@ namespace Assets.Models.Spells.Service
         {
             _avilableAt = Time.time + _cooldown;
             GameObject spell = Instantiate(_prefab, _caster.transform.position, Quaternion.identity);
-            spell.GetComponent<SpellController>().CreateSpell<T>();
+            spell.GetComponent<SpellController>().CreateSpell<T>(_speed, Power, Range);
         }
 
         public bool IsAvilable()

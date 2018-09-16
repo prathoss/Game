@@ -8,6 +8,9 @@ namespace Assets.Models.Spells.Service
         {
             _cooldown = 2f;
             ManaCost = 20;
+            _speed = 5f;
+            Power = 12;
+            Range = 7;
         }
 
         public override void Cast()

@@ -4,9 +4,10 @@ namespace Assets.Models.Base
 {
     public abstract class BaseSpell
     {
+
         public BaseSpell() { }
 
-        public int Range { get; protected set; }
+        protected int _range;
         protected float _speed;
         protected GameObject _caster;
         protected Vector3 _destination;
@@ -35,8 +36,15 @@ namespace Assets.Models.Base
         public void GetProperties(GameObject gameObject, Vector3 direction)
         {
             _spellObject = gameObject;
-            _destination = gameObject.transform.position + direction * Range;
+            _destination = gameObject.transform.position + direction * _range;
             _destination.y = _baseSpellHeight;
+        }
+
+        public void GetProperties(float speed, int power, int range)
+        {
+            _speed = speed;
+            _power = power;
+            _range = range;
         }
 
     }
