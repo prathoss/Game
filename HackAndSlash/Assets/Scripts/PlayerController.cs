@@ -9,15 +9,15 @@ public class PlayerController : MonoBehaviour
     private SpellServiceFactory _spellFactory;
     public ESpells SpellQ;
     private BaseSpellService _spellQ;
-    public string SpellQCooldownRemining { get { return _spellQ.CooldownTimeRemining().ToString(); } }
+    public string SpellQCooldownRemining { get { return _spellQ.CooldownTimeRemining(); } }
     public Text SpellQCooldownText;
     public ESpells SpellW;
     private BaseSpellService _spellW;
-    public string SpellWCooldownRemining { get { return _spellW.CooldownTimeRemining().ToString(); } }
+    public string SpellWCooldownRemining { get { return _spellW.CooldownTimeRemining(); } }
     public Text SpellWCooldownText;
     public ESpells SpellE;
     private BaseSpellService _spellE;
-    public string SpellECooldownRemining { get { return _spellE.CooldownTimeRemining().ToString(); } }
+    public string SpellECooldownRemining { get { return _spellE.CooldownTimeRemining(); } }
     public Text SpellECooldownText;
 
 

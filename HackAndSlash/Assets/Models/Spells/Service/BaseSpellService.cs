@@ -34,9 +34,9 @@ namespace Assets.Models.Spells.Service
             return Time.time >= _avilableAt ? true : false;
         }
 
-        public int CooldownTimeRemining()
+        public string CooldownTimeRemining()
         {
-            return IsAvilable() ? 0 : (int)(_avilableAt - Time.time) + 1;
+            return IsAvilable() ? string.Empty : ((int)(_avilableAt - Time.time) + 1).ToString();
         }
 
         public abstract void Cast();

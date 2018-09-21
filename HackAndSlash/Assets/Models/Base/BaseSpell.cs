@@ -15,6 +15,7 @@ namespace Assets.Models.Base
         protected int _power;
         protected readonly float _baseSpellHeight = 0.3f;
         public static readonly string PrefabLocation = string.Empty;
+        public static readonly string IconLocation = string.Empty;
 
         public void Move()
         {
